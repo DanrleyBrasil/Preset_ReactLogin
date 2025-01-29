@@ -20,11 +20,7 @@ Para este projeto foi utilizado um projeto back-end, disponível neste [link](ht
 
 ## Configuração do Projeto
 
-1. Clone este repositório:
-   ```sh
-   git clone https://github.com/seu-usuario/preset-login-react.git
-   cd preset-login-react
-   ```
+1. Clone este repositório!
 2. Instale as dependências:
    ```sh
    npm install
