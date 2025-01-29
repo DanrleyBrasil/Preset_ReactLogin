@@ -128,5 +128,4 @@ Resposta esperada:
 
 ---
 
-Agora o README reflete todas as mudanças feitas no projeto! 🚀
 
