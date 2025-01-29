@@ -1,12 +1,13 @@
 # Projeto: Preset de Login com React.js
 
-## Descrição
-
-Este projeto é um preset de login utilizando React.js (Vite) que consome uma API remota para autenticação. O sistema armazena o token JWT no `localStorage` e redireciona os usuários para diferentes telas de acordo com suas permissões:
 
 ## Parceria
 
 Para este projeto foi utilizado um projeto back-end, disponível neste [link](https://github.com/DanrleyBrasil/Preset_OAuth2)
+
+## Descrição
+
+Este projeto é um preset de login utilizando React.js (Vite) que consome uma API remota para autenticação. O sistema armazena o token JWT no `localStorage` e redireciona os usuários para diferentes telas de acordo com suas permissões:
 
 - **ADMIN**: Redireciona para "Bem-vindo Admin" com contador do tempo restante para expiração do token e um botão "Hello" que faz uma requisição autenticada para a API.
 - **USER**: Redireciona para "Bem-vindo User" com contador do tempo restante para expiração do token e um botão "Hello" que faz uma requisição autenticada para a API.
