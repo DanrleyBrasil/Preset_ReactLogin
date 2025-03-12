@@ -1,19 +1,28 @@
-import 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage/LoginPage';
-import AdminPage from './pages/AdminPage/AdminPage';
-import UserPage from './pages/UserPage/UserPage';
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Unauthorized from "./pages/Unauthorized";
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/user" element={<UserPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/" element={<Navigate to="/login" replace />} /> {/* 🔹 Redireciona "/" para "/login" */}
+        <Route path="*" element={<Navigate to="/login" replace />} /> {/* 🔹 Redireciona rotas inválidas para login */}
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
